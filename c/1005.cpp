@@ -5,11 +5,12 @@
 int main(){
 	int t;
 	int D[1001]={0,};
-	int K[1001][1001];
+	int K[100][100]={0, };
 	int i;
 	int n, k;
 	int a,b;
 	int dest;
+	int dp[100001];
 	#ifdef DEBUG
 	while(1){
 	#endif
@@ -29,6 +30,7 @@ int main(){
 		}
 		//지어야하는건물
 		scanf("%d", &dest);
+		dp[n] += D[dest];
 		
 		
 		
