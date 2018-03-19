@@ -8,7 +8,8 @@ int constructTime[1001];
  
 void InitAllValue() {
 	for (int i = 0; i < 1001; i++){
-		memo[i] = 0; constructTime[i] = 0;
+		memo[i] = 0;
+		constructTime[i] = 0;
 		for (int j = 0; j < 1001; j++) {
 			connection[i][j] = false;
 		} 
