@@ -1,43 +1,31 @@
-'''
-1 = / 2 3 4 5 6 7 8 9
-2 = 1 / 3 4 5 6 7 8 9
-3 = 1 2 / 4 5 6 7 8 9
-4 = 1 2 3 / 5 6 7 8 9
-5 = 1 2 3 4 / 6 7 8 9
-6 = 1 2 3 4 5 / 6 7 9
-.
-.
-.
-'''
-
 import sys
-sys.setrecursionlimit(1000000)
+sys.setrecursionlimit(1000000000)
 
 dp = [0]*1000000
 ret = 0
+mod = 1000000000
 
-def func(n, i, j, k):#횟수 위치 계단수 현재값
+def func(n, i, k):#횟수 위치 (계단수) 현재값
     global ret
-    if n<i:
+    if n<=i:
         ret = ret+1
+        if ret==mod:
+            ret = 0
         return 0
-    if k-j<0 or k+j>9:
-        if k+j<10:
-            func(n, i+1, j, k+j)
-        else:
-            return 0
-        if k-j>-1:
-            func(n, i+1, j, k-j)
+    if k<1 or k>8:
+        if k<9:
+            func(n, i+1, k+1)
+        elif k>0:
+            func(n, i+1, k-1)
         else:
             return 0
     else:
-        func(n, i+1, j, k+j)
-        func(n, i+1, j, k-j)
+        func(n, i+1, k+1)
+        func(n, i+1, k-1)
 
 
 
 N = int(input())
-for j in range(1, 9):
-    for k in range(1, 10):
-        func(N, 1, j, k)
-print(ret-47)
+for k in range(1, 10):
+    func(N, 1, k)
+print(ret)
