@@ -7,10 +7,15 @@ arr2 = [0]*1000000
 ret = 0
 
 def func(n, i):
+    global ret
     if n<i:
         return 0
-    for j in range(1, i+1):
-        dp[i] = max(dp[i], dp[i-j]+arr2[j])
+    if dp[i-1]<arr2[i]:
+        dp[i] = arr2[i]
+        ret+=1
+    else:
+        dp[i] = dp[i-1]
+
     func(n, i+1)
 
 
@@ -23,4 +28,4 @@ for i in range(0, N):
 
 
 func(N, 1)
-print(int(dp[N]))
+print(ret)
