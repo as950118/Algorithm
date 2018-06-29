@@ -1,18 +1,23 @@
 import sys
 sys.setrecursionlimit(1000000000)
 
-n, m = input().split()
-
-n = int(n)
-m = int(m)
-print(n*m-1)
-'''
-11 = 0
-21 = 1
-22 = 3
-32 = 5
-33 = 8
-42 = 7
-43 = 11
-44 = 15
-'''
+n=int(input());
+def maxScore(y,x):
+    if(x>=m):return 0;
+    if(d[y][x]!=-1):return d[y][x];
+    if y==0:
+        d[y][x]=max(maxScore(1,x+1),maxScore(1,x+2))+arr[y][x];
+        return d[y][x];
+    if y==1:
+        d[y][x]=max(maxScore(0,x+1),maxScore(0,x+2))+arr[y][x];
+        return d[y][x];
+for i in range(n):
+    m=int(input());
+    arr=[0,0]
+    arr[0]=list(map(int,input().split(' ')));
+    arr[1]=list(map(int,input().split(' ')));
+    d=[[-1]*m,[-1]*m];
+    up=maxScore(0,0)
+    d=[[-1]*m,[-1]*m];
+    down=maxScore(1,0)
+    print(max(up,down))
