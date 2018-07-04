@@ -22,4 +22,4 @@ while debug:
         for j in range(1, m):
             dp[i][j] = max(dp[i-1][j], dp[i][j-1])+ arr[i][j]
     print(dp[n-1][m-1])
-    debug = 0
+    debug = 1
