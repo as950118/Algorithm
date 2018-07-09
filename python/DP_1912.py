@@ -1,55 +1,26 @@
 import sys
-sys.setrecursionlimit(1000000)
+sys.setrecursionlimit(1000001)
 
 
-dp = [0]*1000000
-arr = [0]*1000000
+dp = [0]*1000001
+arr = [0]*1000001
 ret = 0
+debug = 1
+while debug:
+    n = int(input())
 
-def func(n, i):
-    if n<i:
-        return 0
-    if dp[i-1]+arr[i-1]<0:
-        dp[i] = 0
-    else:
-        dp[i] = arr[i-1] + dp[i-1]
+    arr = input().split()
 
-    if dp[i]<dp[i-1]:
-        if func2(n, i+1)==-1:
-            dp[n] = dp[i-1]
-            return 0
+    for i in range(0, n):
+        arr[i] = int(arr[i])
 
-    func(n, i+1)
+    dp[0] = arr[0]
+    ret = arr[0]
 
-def func2(n, i):
-    if n<i:
-        return -1
-    if arr[i-1]<0:
-        return func2(n, i+1)
-    else:
-        return 1
+    for i in range(1, n):
+        dp[i] = max(dp[i-1]+arr[i], arr[i])
+        if(ret<dp[i]):
+            ret = dp[i]
 
-def func3(n, i):
-    global ret
-    if n<i:
-        return ret
-
-    else:
-        ret = max(arr[i-1], ret)
-        func3(n, i+1)
-
-n = int(input())
-
-arr = input().split()
-
-for i in range(0, n):
-    arr[i] = int(arr[i])
-
-dp[1] = arr[0]
-func(n, 2)
-if dp[n]==0:
-    ret= arr[0]
-    func3(n,1)
     print(ret)
-else:
-    print(dp[n])
+    debug = 0
