@@ -1,24 +1,16 @@
 import sys
 sys.setrecursionlimit(1000000000)
 
-n, k = input().split()
-n = int(n)
-k = int(k)
+n, k = map(int, sys.stdin.readline().split())
 arr = [0]*101
-dp = [0]*10001
-for i in range(0, n):
+dp = [100001]*100001
+dp[0] = 0
+for i in range(1, n+1):
     arr[i] = int(input())
-def func(n, i, k):
-    if n<i:
-        return k
-    for j in range(1, n):
-        dp[i] = dp[i-1] + arr[j]
-        if dp[i] == 15:
-            return k
-        elif dp[i]>15:
-            dp[i] = -1
-            return -1
-        else:
-            func(n, i, k+1)
 
-print(func(n,1,0))
+for i in range(1, n+1):
+    for j in range(arr[i], k+1):
+        dp[j] = min(dp[j], dp[j-arr[i]]+1)
+if dp[k]==100001:
+    dp[k] = -1
+print(dp[k])
