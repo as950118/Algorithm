@@ -11,6 +11,8 @@ ret=0
 
 def func(a, b, sum):
     global ret
+    if a==len_arr:
+        return 0
     for i in range(a, len_arr):
         for j in range(b, len_arr2):
             if arr[i]==arr2[j]:
