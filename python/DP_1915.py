@@ -1,51 +1,34 @@
 import sys
 import math
-#import os
-#import time
-#import multiprocessing
+from collections import deque
+
 sys.setrecursionlimit(1000000000)
-#from collections import deque
 
 
-n, m = map(int, input().split())
-arr_x = [[0]*(n) for i in range(m)]
-dp_x = [[-1]*(n) for i in range(m)]
-dp_x = [[-1]*(n) for i in range(m)]
-dp_xy = [[-1]*(n) for i in range(m)]
-direction = list(range(1,n))
 
-for i in range(n):
-    arr_x[i] = list(map(int, input().split()))
+m,n = map(int, input().split())
+arr = [[0]*(n+1) for i in range(m+1)]
 
-arr_y = arr_x
-print(arr_y, arr_x)
-def func_x(x,y):
-    if dp_x[x][y] != -1:
-        return dp_x[x][y]
-    dp_x[x][y] = 1
-    print(x,y)
-    if x+1<n and arr_x[x+1][y] == 1:
-        temp = 1
-        temp = temp + func_x(x+1, y)
-        dp_x[x][y] = max(dp_x[x][y], temp)
-    return dp_x[x][y]
-def func_y(x,y):
-    if dp_y[x][y] != -1:
-        return dp_y[x][y]
-    dp_y[x][y] = 1
-    if y+1<m and arr_y[x][y+1] == 1:
-        temp = 1
-        temp = temp + func_y(x+1, y)
-        dp_y[x][y] = max(dp_y[x][y], temp)
-    return dp_y[x][y]
+for i in range(1, m+1):
+	temp = input()
+	for j in range(1, n+1):
+		arr[i][j] = int(temp[j-1])
+ret = 0
 
-for i in range(m):
-    func_x(0,i)
-for i in range(n):
-    func_y(i,0)
+dp = [[0]*(n+1) for i in range(m+1)]
 
-for i in range(n):
-    for j in range(m):
-        if dp_x[i][j] == dp_x[i][j]:
-            dp_xy[i][j] = dp_x[i][j]
-print(max(dp_x))
+for i in range(1, m+1):
+	for j in range(1, n+1):
+		if arr[i][j] == 1:
+			dp[i][j] = 1
+			temp = min(dp[i-1][j], dp[i][j-1])
+			if dp[i-temp][j-temp] != 0:
+				dp[i][j] = temp + 1
+			else:
+				dp[i][j] = temp
+			ret = max(dp[i][j], ret)
+'''
+for i in range(1, m+1):
+	print(arr[i], dp[i])
+'''
+print(ret*ret)

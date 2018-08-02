@@ -3,7 +3,7 @@ import math
 from collections import deque
 sys.setrecursionlimit(10000000)
 
-def find(s, vstr):#
+def find(s, vstr):#Find Data in the Cache
     length = len(vstr)
     for i in range(length):
         if vstr[i] == s:
@@ -12,26 +12,26 @@ def find(s, vstr):#
 
 def LRU(n, arr):#CacheSize, Array
     count = 0
-    strarr = deque()#Efficient to Inut and Output
+    cache = deque()#Cache (Deque is Efficient to Input and Output)
     for i in range(len(arr)):
         arr[i] = arr[i].upper()#String Unity
-        m = find(arr[i], strarr)
+        m = find(arr[i], cache)
 
-        if m<0:
-            if len(strarr)<n:
-                count += 5
-                strarr.append(arr[i])
-            else:
-                count = count + 5
-                if len(strarr) != 0:
-                    strarr.popleft()
-                strarr.append(arr[i])
-        else:
-            temp = strarr[m]
-            strarr[m] = strarr[len(strarr)-1]
-            strarr.pop()
-            strarr.append(temp)
+        if m<0:#Cache miss(Data to DOES NOT be referenced exists in the cache)
+            count = count + 5
+            if len(cache)<n:#Cache is not full
+                cache.append(arr[i])
+            else:#Cache is full
+                if len(cache) != 0:#If Cache Size == 0 => unavailable Remove last(far left)
+                    cache.popleft()
+                cache.append(arr[i])
+        else:#Cache hit(Data to be referenced exists in the cache)
             count = count + 1
+            temp = cache[m]
+            #Exchange Hit Data(M'st) <=> Latest Data(Far right)
+            cache[m] = cache[len(cache)-1]#Latest Data Input the M'st Index
+            cache.pop()#Remove cache[m] == Remove Hit Data(Far right)
+            cache.append(temp)#Insert Latest == Insert Hit Data(Far right)
 
     print(count)
     return count
