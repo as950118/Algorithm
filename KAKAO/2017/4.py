@@ -23,13 +23,24 @@ def func(i, min_time, max_time):
     for j in range(len(timetable[i])):
         if min_time<timetable[i][j] and timetable[i][j] <= max_time:
             count[i] += 1
-
-    if count[i]<=m[i]:
-        ret[i] = (n[i]-1)*(t[i]) + max_time
+    if n == 1:
+        if count[i] >= m[i]:
+            timetable[i].sort()
+            max_time = timetable[i][m[i]-1]
+            ret[i] = max_time-1
+            return 0
+        else:
+        	ret[i] = max_time
+        	return 0
     else:
-        count[i] -= m[i]
-        n[i] -= 1
-        func(i, max_time, max_time + m[i])
+        if count[i]>=m[i]:
+            count[i] -= m[i]
+            n[i] -= 1
+            func(i, max_time, max_time + t[i])
+        else:
+            count[i] = 0
+            n[i] -= 1
+            func(i, max_time, max_time + t[i])
     print(ret)
 
 for i in range(6):
