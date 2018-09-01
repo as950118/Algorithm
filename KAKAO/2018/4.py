@@ -46,7 +46,7 @@ def func(c_x, c_y, cur_hp, boost):
             return 0
     else:
         for i in range(4):
-            if c_y+dir_y[i]<=map_x+1 and c_y+dir_y[i]>=0 and c_x+dir_x[i]<=map_x+1 and c_x+dir_x[i]>=0 :
+            if abs(c_y+dir_y[i])<=map_y and abs(c_x+dir_x[i]<=map_x):
                 func(c_x + dir_x[i], c_y + dir_y[i], cur_hp-1, boost)
         if boost == 1:
             for i in range(map_x+1):
@@ -69,7 +69,7 @@ for i in range(q):
 
     s, e, max_hp= map(int, input().split())
     s_x, s_y = arr_n[s-1][0]+map_x+1, arr_n[s-1][1]+map_y+1
-    e_x, e_y = arr_n[e-1][0]+map_x+1, arr_n[e-1][1]+map_y+1
+    e_x, e_y = arr_n[e-1][0], arr_n[e-1][1]
     ret = 0
     func(s_x, s_y, max_hp, 0)
     if ret:
