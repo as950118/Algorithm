@@ -6,6 +6,7 @@ n = int(input())
 arr = list(map(int, sys.stdin.readline().split()))
 dp = [-1]*(n)
 ret = -1
+
 def func(a,b):
     global ret
     if a==n-1:
@@ -22,11 +23,12 @@ def func(a,b):
             if a+i==n-1:
                 func(a+i, b+1)
                 return 0
-            if arr[a+i]>temp:
+            if i + arr[a+i]>temp_i + temp:
                 temp = arr[a+i]
                 temp_i = i
     if temp_i != 0:
         func(a+temp_i, b+1)
     return 0
+
 func(0,0)
 print(ret)
