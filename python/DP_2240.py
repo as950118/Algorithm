@@ -23,10 +23,6 @@ def func(cur, move, time):#cur, move, time
 t, w = map(int, sys.stdin.readline().split())
 arr = [0]*(t+1)
 for i in range(t):
-    #arr[i+1] = int(input())
-    if i%2==1:
-        arr[i+1] = 1
-    else:
-        arr[i+1] = 2
+    arr[i+1] = int(input())
 dp = [[[-1]*(2+1) for i in range(w+1)] for j in range(t+1)]
 print(func(1,0,0))
