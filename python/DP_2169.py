@@ -1,35 +1,36 @@
 import sys
 sys.setrecursionlimit(1000000)
 
+MIN = -1000000
 
 n ,m = map(int, sys.stdin.readline().split())
 arr = [[0]*(m) for i in range(n)]
-dp = [[-10000000]*(m) for i in range(n)]
-dir_x = [1,-1,0]
-dir_y = [0,0,1]
+dp = [[[MIN]*4 for j in range(m)] for k in range(n)]
+dir_x = [0,1,0]
+dir_y = [1,0,-1]
 
 for i in range(n):
     arr[i] = list(map(int, sys.stdin.readline().split()))
-
-dp[0][0] = arr[0][0]
-
-for i in range(1, m):
-    dp[0][i] = arr[0][i] + dp[0][i-1]
+    #for j in range(m):
+    #    arr[i][j] = 5
 
 
-def func(cx, cy):
-    if cy == 0:
-        dp[cx][cy] = arr[cx][cy] + max(dp[cx-1][cy], dp[cx][cy+1])
-    elif cy == m-1:
-        dp[cx][cy] = arr[cx][cy] + max(dp[cx-1][cy], dp[cx][cy-1])
-    else:
-        dp[cx][cy] = arr[cx][cy] + max(dp[cx-1][cy], dp[cx][cy-1], dp[cx][cy+1])
+def func(x, y, d):
+    if x == n-1 and y == m-1:
+        return arr[x][y]
+    ret = dp[x][y][d]
+    if ret != MIN:
+        return ret
 
 
-for i in range(1,n):
-    for j in range(m):
-        func(i,j)
+    for i in range(3):
+        xx = x+dir_x[i]
+        yy = y+dir_y[i]
+        if xx > -1 and yy > -1 and xx < n and yy < m and dp[xx][yy][3] == MIN:
+            dp[xx][yy][3] = 1
+            dp[x][y][d] = ret = max(ret, func(xx, yy, i) + arr[x][y])
+            dp[xx][yy][3] = MIN
+    return ret
 
-print(dp[n-1][m-1])
-for i in range(n):
-    print(dp[i])
+
+print(func(0,0,0))
