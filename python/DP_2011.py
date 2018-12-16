@@ -1,31 +1,17 @@
-import sys
-sys.setrecursionlimit(1000000)
-from collection import deque
+MOD = 1000000 #문제 조건에 의해 나눌값
 
-n = sys.stdin.readline()
-arr = deque()
-for i in n:
-	arr.append(i)
-l = len(arr)
-dp = [0]*(l)
-ret = 0
+pwd = [0] + list(map(int, input())) # 편의를 위하여 0부터가 아닌 1부터 시작
+n = len(pwd) -1 # 0을 추가하였으므로 -1 해줌
+dp = [(0) for i in range(n+1)]
+dp[0] = 1 #초기값 설정
 
-def func(i):
-	if dp[i] != 0:
-		return dp[i]
-	dp[i] = 1
-	if i+1<l:
-		if arr[i+1]==0:
-			return dp[i]
-			if arr[i]==2:
-				if arr[i+1]<7:
-					temp = 2
-					if func(i+1) == 1:
-						temp = 3
-					else:
-						k
-			elif arr[i]==1:
+for i in range(1, n+1):
+	if pwd[i] != 0:
+		dp[i] = dp[i-1]
 
-	else:
+	val = pwd[i-1]*10 + pwd[i]
+	if 27 > val and val > 9:
+		dp[i] += dp[i-2]
+	dp[i] %= 1000000 #문제 조건에 의해 나누기
 
-		
+print(dp[n])
