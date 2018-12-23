@@ -1,21 +1,12 @@
-import sys
-import math
-sys.setrecursionlimit(1000000)
-from collections import deque
-
-t = sys.stdin.readline()
-
-for T in t:
-    n = sys.stdin.readline()
-    n = int(n)
-
+for T in range(int(input())):
+    n = int(input())
     arr = [0]*(n+1)
     arr_s = [0]*(n+1)
 
     dp = [[0]*(n+1) for i in range(n+1)]
     knuth = [[0]*(n+1) for i in range(n+1)]
-    arr = list(map(int, sys.stdin.readline().split()))
-    arr.insert(0,0)
+    arr = [0] + list(map(int, input().split()))
+
     for i in range(1, n+1):
         arr_s[i] = arr_s[i-1] + arr[i]
         dp[i-1][i] = 0
