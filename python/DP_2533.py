@@ -13,18 +13,18 @@ for i in range(n-1):
 
 #BFS
 bfs = deque()
-Deque = deque([1])
-visit = [(False) for i in range(n+1)]
+Que = deque([1])
+visit = [(0) for i in range(n+1)]
 visit[1] = True
-while Deque:
-	leftval = Deque.popleft()
-	bfs.appendleft(leftval)
-	for i in temp[leftval]:
+while Que:
+	node = Que.popleft()
+	bfs.appendleft(node)
+	for i in temp[node]:
 		if visit[i]:
 			continue
-		visit[i] = True
-		edge[leftval].append(i)
-		Deque.append(i)
+		visit[i] = 1
+		edge[node].append(i)
+		Que.append(i)
 
 
 for i in bfs:
@@ -33,4 +33,3 @@ for i in bfs:
 		dp[0][i] += dp[1][j]
 		dp[1][i] += min(dp[0][j], dp[1][j])
 print(min(dp[0][1], dp[1][1]))
- ​
