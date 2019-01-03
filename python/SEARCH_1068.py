@@ -8,27 +8,34 @@ temp[int(input())] = None
 edge = [[] for i in range(n)]
 for i in range(n):
 	try:
-		edge[i].append(temp[i])
+		if temp[i] == -1:
+			continue
 		edge[temp[i]].append(i)
 	except:
 		pass
-print(edge)
-v = temp.index(-1)
+try:
+	v = temp.index(-1)
 
 
-def BFS_right():#edge는 Node간의 관계 / v는 Root Node
-	bfs = []
-	que = [v]
-	visit = [0 for i in range(n+1)]
-	visit[v] = 1
-	while que:
-		node = que.pop()
-		bfs.append(node)
-		for i in reversed(edge[node]):
-			if visit[i]:
-				continue
-			visit[i] = 1
-			que = [i] + que
-	return bfs
+	def BFS_right():#edge는 Node간의 관계 / v는 Root Node
+		ret = 0
+		bfs = []
+		que = [v]
+		visit = [0 for i in range(n+1)]
+		visit[v] = 1
+		while que:
+			node = que.pop()
+			bfs.append(node)
+			temp = que[:]
+			for i in reversed(edge[node]):
+				if visit[i]:
+					continue
+				visit[i] = 1
+				que = [i] + que
+			if temp==que:
+				ret += 1
+		return ret
 
-print(BFS_right())
+	print(BFS_right())
+except:
+	print(0)
