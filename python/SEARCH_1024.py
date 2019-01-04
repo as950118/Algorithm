@@ -1,29 +1,24 @@
 import sys
-sys.setrecursionlimit(1000000)
-
-def input(): # 편의를 위하여
-	return sys.stdin.readline().strip()
 
 n, l = map(int, input().split())
 
-def func(start, length, val):
-    if length>100 or start<0:
-        return -1
-    if val==n:
-        return start
-    if val>n:
-        return func(start-1, length, val+start-1-(start-1+length))
-    if val<n:
-        return func(start-1, length+1, val+start-1)
+ret = -1
+length = 0
 
-temp = 0
-Start = func((n//l), l, (((n//l)+l-1)*(((n//l)+l))//2) - (((n//l)-1)*((n//l))//2))
-if Start == -1:
-    print(-1)
+for i in range(l, 101):
+	start = (n//i) + (i//2) - i+1
+	if start<0:
+		continue
+	if i%2==1:
+		cal = ((start+1)*2 + i-1-1)*((i-1)/2) + start
+	else:
+		cal = (start*2 + i-1)*(i/2)
+	if cal==n:
+		ret = start
+		length = i
+		break
+if ret == -1:
+	print(-1)
 else:
-    while 1:
-        print(Start, end=" ")
-        temp += Start
-        Start += 1
-        if temp==n:
-            break
+	for i in range(length):
+		print(i+ret, end=" ")
