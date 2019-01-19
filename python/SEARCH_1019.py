@@ -1,25 +1,44 @@
 import math
 
 n = int(input())
-dp = [[-1 for i in range(10)] for i in range(10**6)]
 val = [0 for i in range(10)]
-for j in range(1, n+1):
-    cur_n = j
-    ln = int(math.log10(cur_n)) #로그값을 이용해 자릿수 구하기
-    for i in range(1,ln+2):
-        try:
-            if max(dp[cur_n]) != -1:
-                for j in range(10):
-                    if dp[cur_n][j] != -1:
-                        val[j] += dp[cur_n][j]
-                break
+start = 1
+ret = 1
 
-            dp[cur_n] = [0 for j in range(10)]
-            dp[cur_n][cur_n%(10**i)] += 1
-        except:
-            pass
-        val[cur_n%(10**i)] += 1
-        cur_n = cur_n//(10**(i))
+while 1:
+    if n<start:
+        break
+    while 1:
+        if n%10 == 9 or n<start:
+            break
+        temp_n = n
+        while 1:
+            if temp_n <= 0:
+                break
+            val[temp_n%10] += ret
+            temp_n //= 10
+        n -= 1
+
+    if n<start:
+        break
+    while 1:
+        if start%10 == 0 or n<start:
+            break
+        temp_start = start
+        while 1:
+            if temp_start <= 0:
+                break
+            val[temp_start%10] += ret
+            temp_start //= 10
+        start += 1
+
+    n //= 10
+    start //= 10
+
+    for i in range(10):
+        val[i] += (n-start+1)*ret
+
+    ret *= 10
 
 for i in val:
     print(i, end=" ")
