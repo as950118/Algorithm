@@ -13,8 +13,8 @@ def func(count, x,y):
         Y = y+dirY[i]
         if Map[X][Y]:
             continue
-        ret += func(count+1,X,Y)*percent[i]
-    Map[x][y] = 0
+        ret += func(count+1,X,Y)*percent[i] #퍼센트지 곱해주기
+    Map[x][y] = 0 #이렇게 해당 경우의 수를 다 조사한뒤에는 방문한 지점을 지워줘야합니다.
     return ret
 
 print(func(0,N,N))
