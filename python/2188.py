@@ -14,7 +14,7 @@ def func(v):
         return 0
     visit[v] = 1
     for elem in edge[v]:
-        if not room[elem] or func(elem):
+        if not room[elem] or func(room[elem]):
             room[elem] = v
             return 1
     return 0
