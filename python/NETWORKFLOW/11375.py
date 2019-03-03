@@ -1,13 +1,16 @@
 import sys
+input = lambda:sys.stdin.readline().strip()
 import queue
 INF = sys.maxsize
-
-graph = [[5],[4,6],[5,7],[6,7]]
-len_groupA = 4 #그룹A의 크기
-len_groupB = 4 #그룹B의 크기
+n,m = map(int, input().split())
+graph = []
+for i in range(n):
+    graph.append(list(map(int, input().split()))[1:])
+len_groupA = n #그룹A의 크기
+len_groupB = m #그룹B의 크기
 matched = [0 for i in range(len_groupA)] #매칭되었는지를 체크
 groupA = [-1 for i in range(len_groupA)] #0~3만 사용할 것이므로
-groupB = [-1 for i in range(len_groupA+len_groupB)] #4~8만 사용할거지만, 편의상 크게해줌
+groupB = [-1 for i in range(len_groupB+1)] #4~8만 사용할거지만, 편의상 크게해줌
 dist = [INF for i in range(len_groupA)] #그룹A의 Node들의 Level
 
 def bfs(): #그룹A의 Node들의 Level을 매기기 위해서
@@ -28,7 +31,7 @@ def bfs(): #그룹A의 Node들의 Level을 매기기 위해서
 
 def dfs(a):
     for b in graph[a]: #그룹A의 a번째 Node와 연결되어있는 그룹B의 b중에서
-        #(매칭되어있거나, b에 연결된 a'와 a의 Level이 1차이 나거나), (b에 연결되어있는 a'가 (매칭되어있거나, level이 1차이 나면))
+        #(매칭되어있지않거나, b에 연결된 a'와 a의 Level이 1차이 나거나), (b에 연결되어있는 a'가 (매칭되어있지않거나, level이 1차이 나면))
         if groupB[b] == -1 or dist[groupB[b]] == dist[a] + 1 and dfs(groupB[b]):
             matched[a] = 1
             groupA[a] = b
