@@ -16,7 +16,8 @@ def DFS_left(edge, v):#edge는 Node간의 관계 / v는 Root Node
 
 def DFS_right(edge, v):#edge는 Node간의 관계 / v는 Root Node
 	dfs = []
-	stack = [v]
+	stack = set()
+	stack.add(v)
 	visit = [0 for i in range(n+1)]
 	while stack:
 		node = stack.pop() #오른쪽부터 탐색하는 경우의 DFS임
@@ -24,6 +25,7 @@ def DFS_right(edge, v):#edge는 Node간의 관계 / v는 Root Node
 			pass
 		else:
 			visit[node] = 1 #방문 현황을 표시함
-			dfs.append(node) #DFS에 추가함
-			stack = stack + edge[node] #현재 Node의 Child를 가장 뒤쪽에 삽입함
+			dfs.add(node) #DFS에 추가함
+			for child in edge[node]:
+				stack.add(child) #현재 Node의 Child를 가장 뒤쪽에 삽입함
 	return dfs

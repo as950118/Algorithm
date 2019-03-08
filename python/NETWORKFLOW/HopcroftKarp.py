@@ -2,12 +2,12 @@ import sys
 import queue
 INF = sys.maxsize
 
-graph = [[5],[4,6],[5,7],[6,7]]
+graph = [[1],[0,2],[1,3],[2,3]]
 len_groupA = 4 #그룹A의 크기
 len_groupB = 4 #그룹B의 크기
 matched = [0 for i in range(len_groupA)] #매칭되었는지를 체크
-groupA = [-1 for i in range(len_groupA)] #0~3만 사용할 것이므로
-groupB = [-1 for i in range(len_groupA+len_groupB)] #4~8만 사용할거지만, 편의상 크게해줌
+groupA = [-1 for i in range(len_groupA)] #
+groupB = [-1 for i in range(len_groupB)] #
 dist = [INF for i in range(len_groupA)] #그룹A의 Node들의 Level
 
 def bfs(): #그룹A의 Node들의 Level을 매기기 위해서
