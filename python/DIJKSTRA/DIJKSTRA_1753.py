@@ -5,33 +5,33 @@ INF = sys.maxsize
 V, E = map(int, input().split())
 K = int(input())
 
-edge = [[] for i in range(V)] #사작점에 대해서만 선언
-dist = [INF for i in range(V)] #모든 거리에 대해 최대값으로 설정
+import sys
+MAX = 10**9 #최대값
+n = int(sys.stdin.readline().strip())
+arr = [[MAX for i in range(n)] for ii in range(n)]
+for i in range(n): #같은 지점으로 가는 방법은 없으므로
+    arr[i][i] = 0
+m = int(sys.stdin.readline().strip())
 
-for i in range(E):
-    u,v,w=map(int, sys.stdin.readline().strip().split()) #input()보다 훨씬 빠름
-    edge[u-1].append((v-1, w))
+for i in range(m):
+    a, b, c = map(int, sys.stdin.readline().strip().split()) #readline과 input의 시간차이가 상당함
+    if arr[a-1][b-1]>c: #-1을 해준 이유는, 1부터가 아니라 0부터 시작하기때문, 편의에 따라 설정
+        arr[a-1][b-1] = c
 
-def dijkstra():
-    q = queue.PriorityQueue() #우선순위 큐를 생성
-    q.put((0, K-1)) #현재까지의 거리, 현재노드
-    dist[K-1] = 0 #시작점에서 도착지점사이의 거리
+for k in range(n):
+    for i in range(n):
+        for j in range(n):
+            temp = arr[i][k] + arr[k][j] #정점사이의 여러가지 방벙
+            if arr[i][j]>temp:
+                arr[i][j]=temp
 
-    while not q.empty():
-        pp = q.get()
-        cur_n = pp[1] #현재 노드 위치
-        cur_d = pp[0] #현재 거리
-
-        if dist[cur_n] < cur_d: #만약 시작노드에서 현재노드까지 직접 연결하는 거리가 지금까지 거쳐온 거리보다 짧다면, 더이상 진행하지 않고 직접 연결하는 거리를 최소값으로 하고 해당노드에 대해서는 더 이상 탐색하지 않음
-            continue
-        for next_n in edge[cur_n]: #현재 노드에 연결된 노드들에 관해서
-            next_d = cur_d + next_n[1] #현재까지의 거리와 다음 노드까지의 거리의 합이
-            if dist[next_n[0]] > next_d: #직접 연결하는 경우보다 짧을경우
-                dist[next_n[0]] = next_d #최소거리를 갱신하고
-                q.put((next_d, next_n[0])) #최소거리에 대한 값을 큐에 넣어줌
-
-
-dijkstra()
+for i in range(n):
+    for j in range(n):
+        if arr[i][j]!=MAX: #만약 가는 방법이 없다면 예외처리를 해줘야함
+            print(arr[i][j], end=" ")
+        else:
+            print(0, end=" ")
+    print("")
 
 for i in range(V):
     print(dist[i] if dist[i] !=INF else "INF")
