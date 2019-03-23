@@ -1,4 +1,3 @@
-import sys
 n = sys.stdin.readline().strip()
 arr1 = list(map(int, sys.stdin.readline().strip().split()))
 m = sys.stdin.readline().strip()
