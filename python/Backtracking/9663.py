@@ -1,41 +1,27 @@
 '''
-col, row, left cross, right cross를 체크해줘야함
+col, row, cross를 체크해줘야함
 '''
-
 
 n = int(input())
 check = [0 for i in range(n)]
-ret = 0
+
 def checking(cur):
-    print(check, cur)
-    a - b = c - d
-    b - a = c - d
-    b = a-c+d
-    b = a+c-d
-    try:
-        check[:cur].index(check[cur])
-        check[:cur].index(check)
-        return 0
-    except:
-        return 1
     for i in range(cur):
-        if check[cur] == check[i]:
+        if check[cur] == check[i]: #row(y) 검사
             return 0
-        #if abs(cur-check[cur]) == abs(i-check[k]):
-        if abs(check[cur] - check[i]) == (cur-i):
+        if abs(check[cur] - check[i]) == (cur-i): #cross 검사
             return 0
     return 1
 
 def backtracking(cur):
     if cur==n:
-        global ret
-        ret += 1
+        return 1
     else:
-        for i in range(n):
+        ret = 0
+        for i in range(n): #col(x)을 기준으로 진행
             check[cur] = i
-            if checking(cur):
-                backtracking(cur+1)
+            if checking(cur): #둘수있는지 검사
+                ret += backtracking(cur+1)
+    return ret
 
-
-backtracking(0)
-print(ret)
+print(backtracking(0))
