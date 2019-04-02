@@ -1,37 +1,49 @@
 import sys
+input = lambda:sys.stdin.readline().strip()
 INF = sys.maxsize
 
+#n, edge 입력
 n = int(input())
-arr = []
-edge = [[] for i in range(n)]
-yes = [0 for i in range(n)]
-visit = [0 for i in range(n)]
+edge = []
 for i in range(n):
-    arr.append(list(map(int, input().split())))
-    for j in range(0,i):
-        edge[i].append((j,arr[i][j]))
-    for j in range(i+1,n):
-        edge[i].append((j,arr[i][j]))
+    edge.append(list(map(int, input().split())))
+
+#Yes Bitmask 및 시작점 표시
+yes = (1<<n) - 1
+start = 0
 temp = input()
 for i in range(n):
-    if temp[i]=='Y':
-        yes[i] = 1
+    if temp[i]=='N':
+        yes ^= 1<<i
     else:
-        continue
-p = int(input())
-ret = INF
-def func(cur, val, node):
-    if cur == p:
-        global ret
-        ret = min(ret, val)
-        return 0
-    for next_n, next_d in edge[node]:
-        if not visit[next_n]:
-            visit[next_n] = 1
-            func(cur+1, val+next_d, next_n)
-            visit[next_n] = 0
+        start += 1
 
-for y in yes:
-    visit[y] = 1
-    func(1,0,y)
-print(ret)
+#p 입력
+p = int(input())
+
+#DP
+dp = [-1 for i in range((1<<n))]
+def func(cur, bit):
+    if cur >= p:
+        return 0
+    if dp[bit] != -1:
+        return dp[bit]
+    dp[bit] = INF
+    for j in range(n):
+        if bit & 1<<j:
+            continue
+        for i in range(j):
+            if bit & 1<<i:
+                dp[bit] = min(dp[bit], func(cur+1, bit^(1<<j))+edge[i][j])
+        for i in range(j+1, n):
+            if bit & 1<<i:
+                dp[bit] = min(dp[bit], func(cur+1, bit^(1<<j))+edge[i][j])
+    return dp[bit]
+
+if start==0:
+    if p==0:
+        print(0)
+    else:
+        print(-1)
+else:
+    print(func(start,yes))
