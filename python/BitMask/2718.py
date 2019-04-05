@@ -1,10 +1,10 @@
 import sys
-sys.setrecursionlimit(10**6)
 input = lambda:sys.stdin.readline().strip()
-arr = [0,1,5,11,36,95,281,781,2245,6336,18061,51205,
- 145601,413351,1174500,3335651,9475901,26915305,
- 76455961,217172736,616891945,1752296281,
- 4977472781,14138673395,40161441636,114079985111,
- 324048393905]
+dp = [1,1,5,11]
+dp_len = len(dp)
 for t in range(int(input())):
-    print(arr[int(input())])
+    n = int(input())
+    for i in range(dp_len,n+1):
+        dp.append(dp[i-1] + 5*dp[i-2] + dp[i-3] - dp[i-4])
+    print(dp[n], dp)
+    dp_len = max(dp_len, n+1)
