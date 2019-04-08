@@ -2,28 +2,25 @@ import sys
 sys.setrecursionlimit(10**6)
 input = lambda:sys.stdin.readline().strip()
 
-bit_list = [0, (1<<0), (1<<1 + 1<<0), (1<<2), (1<<2 + 1<<1)] #000, 001, 011, 100, 110
-
-def next_bit(bit):
-    ret = []
-    for i in range(m):
-        if bit ^ (1<<i): #0일 경우
-
-            if i != m-1: #그리고 마지막이 아닐경우
-
-
+n, m = map(int, input().split())
+if n>m: n,m=m,n
+dp = [[-1 for i in range(1<<14)] for ii in range(m*m)]
 
 def func(cur, bit):
-    if cur<0:
+    if cur > n*m:
         return 0
-    if cur==0:
+    if cur == n*m:
         return bit==0
+
     if dp[cur][bit] != -1:
         return dp[cur][bit]
 
-    return dp[cur][bit]
+    if bit & 1: #만약 채워져있다면
+        dp[cur][bit] = func(cur+1, (bit>>1)) #한칸을 미루고 진행
+    else: #채워져있지 않다면
+        dp[cur][bit] = func(cur+1, (bit>>1) | (1<<(m-1))) #한칸미룬 값과 맨 마지막을 or 연산함
 
-n, m = map(int, input().split())
-if n<m: #n을 더 크수로
-    n,m = m,n
-dp = [[-1 for i in range(1<<m)] for ii in range(n)]
+        if cur%m != (m-1) and (bit & 1<<1) == 0: #그리고 마지막이 아니고
+            dp[cur][bit] += func(cur+2, (bit>>2))
+    return dp[cur][bit]
+print(func(0,0)%9901)
