@@ -3,8 +3,7 @@ sys.setrecursionlimit(10**6)
 input = lambda:sys.stdin.readline().strip()
 
 n, m = map(int, input().split())
-if n>m: n,m=m,n
-dp = [[-1 for i in range(1<<14)] for ii in range(m*m)]
+dp = [[-1 for i in range(1<<14)] for ii in range(n*m)]
 
 def func(cur, bit):
     if cur > n*m:
