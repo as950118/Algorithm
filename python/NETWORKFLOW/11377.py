@@ -34,12 +34,12 @@ def dfs(a):
     return 1
 
 
-n,m = map(int, input().split())
+n,m,k = map(int, input().split())
 graph = [[]]
 
 for i in range(n):
     graph.append(list(map(int, input().split()))[1:])
-groupA = [0 for i in range(n+1)]
+groupA = [0 for i in range(n+1)] #birdg를 추가했기때문에
 groupB = [0 for i in range(m+1)]
 dist = [INF for i in range(n+1)] #그룹A의 Node들의 Level
 match = 0 #매칭숫자
@@ -47,4 +47,16 @@ while bfs():
     for a in range(1, n+1):
         if not groupA[a]: #매칭이 안되어있고
             match += dfs(a)
+for a in range(1,n+1):
+    if groupA[a]:
+        graph[a].remove(groupA[a])
+        groupA[a] = 0
+    else:
+        graph[a] = []
+while bfs() and k:
+    for a in range(1, n+1):
+        if not groupA[a]: #매칭이 안되어있고
+            if dfs(a):
+                match += 1
+                k -= 1
 print(match)
