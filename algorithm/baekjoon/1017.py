@@ -15,21 +15,21 @@ def func_prime(n):
     return 1
 for i in range(3,2000):
     prime_num[i] = func_prime(i)
-
 #Array -> Edge
 #모든 소수는 홀수와 짝수의 합이므로
 #홀수와 짝수로 나누어서 이분매칭 진행
 n = int(input())
 arr = list(map(int, input().split()))
-arr_even = [i for i in arr if not i%2]
-arr_odd = [i for i in arr if i%2]
+arr_even = [i for i in arr if not i%2]#홀수
+arr_odd = [i for i in arr if i%2]#짝수
 n_even = len(arr_even)
 n_odd = len(arr_odd)
-edge = [[]for i in range(n+1)]
+edge = [[]for i in range(n)]
 for e in range(n_even):
-    for o in range(n_odd):
+    for o in range(n_even, n_odd):
         if prime_num[arr_even[e]+arr_odd[o]]:
             edge[e].append(o)
+            edge[o].append(e)
 
 
 def bfs(): #그룹A의 Node들의 Level을 매기기 위해서
@@ -63,17 +63,29 @@ def dfs(a):
     return 1
 
 ret = []
-groupA = [0 for i in range(n_even+1)]
-groupB = [0 for i in range(n_odd+1)]
-dist = [INF for i in range(n_even+1)] #그룹A의 Node들의 Level
-while bfs():
-    for a in range(1, n_even+1):
-        if not groupA[a]: #매칭이 안되어있고
-            if dfs(a):
-                if not arr[0]%2:
-                    ret.append(arr_odd[groupA[1]])
-                else:
-                    ret.append(arr_even[groupB[1]])
+n_2 = n//2
+arr_0 = arr[0]
+while 1:
+    match = 0
+    groupA = [0 for i in range(n_even+1)]
+    groupB = [0 for i in range(n_even+n_odd+1)]
+    dist = [INF for i in range(n_even+1)] #그룹A의 Node들의 Level
+    while bfs():
+        for a in range(1, n_even+1):
+            if not groupA[a]: #매칭이 안되어있고
+                match+=dfs(a)
+                if match==n_2:
+                    if arr_0%2:#홀수면
+                        print(groupA[1],edge[0])
+                        ret.append(arr_odd[groupA[1]])
+                        edge[0].remove(groupA[1])
+                        edge[groupA[1]].pop(0)
+                    else:
+                        ret.append(arr_even[groupB[1]])
+                        edge[0].remove(groupB[1])
+                        edge[groupB[1]].remove(0)
+    if match != n_2:
+        break
 if not ret:
     print(-1)
 else:
