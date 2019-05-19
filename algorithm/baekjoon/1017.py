@@ -26,10 +26,10 @@ n_even = len(arr_even)
 n_odd = len(arr_odd)
 edge = [[]for i in range(n)]
 for e in range(n_even):
-    for o in range(n_even, n_odd):
+    for o in range(n_odd):
         if prime_num[arr_even[e]+arr_odd[o]]:
-            edge[e].append(o)
-            edge[o].append(e)
+            edge[e].append(o+n_even)
+            edge[o+n_even].append(e)
 
 
 def bfs(): #그룹A의 Node들의 Level을 매기기 위해서
@@ -69,19 +69,19 @@ while 1:
     match = 0
     groupA = [0 for i in range(n_even+1)]
     groupB = [0 for i in range(n_even+n_odd+1)]
-    dist = [INF for i in range(n_even+1)] #그룹A의 Node들의 Level
+    dist = [INF for i in range(n+1)] #그룹A의 Node들의 Level
     while bfs():
         for a in range(1, n_even+1):
             if not groupA[a]: #매칭이 안되어있고
                 match+=dfs(a)
                 if match==n_2:
+                    print(groupA, groupB)
                     if arr_0%2:#홀수면
-                        print(groupA[1],edge[0])
-                        ret.append(arr_odd[groupA[1]])
+                        ret.append(arr_even[groupA[1]-1])
                         edge[0].remove(groupA[1])
                         edge[groupA[1]].pop(0)
                     else:
-                        ret.append(arr_even[groupB[1]])
+                        ret.append(arr_odd[groupB[1]-1])
                         edge[0].remove(groupB[1])
                         edge[groupB[1]].remove(0)
     if match != n_2:
