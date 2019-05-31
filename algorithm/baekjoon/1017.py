@@ -20,8 +20,8 @@ for i in range(3,2000):
 #홀수와 짝수로 나누어서 이분매칭 진행
 n = int(input())
 arr = list(map(int, input().split()))
-arr_even = [i for i in arr if not i%2]#홀수
-arr_odd = [i for i in arr if i%2]#짝수
+arr_even = [i for i in arr if not i%2]#짝수
+arr_odd = [i for i in arr if i%2]#홀수
 n_even = len(arr_even)
 n_odd = len(arr_odd)
 edge = [[]for i in range(n)]
