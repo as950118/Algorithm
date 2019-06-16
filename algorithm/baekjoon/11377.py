@@ -37,7 +37,6 @@ def dfs(a):
         return 0
     return 1
 
-
 n,m,k = map(int, input().split())
 graph = [[]]
 
