@@ -5,8 +5,8 @@ INF = sys.maxsize
 
 def bfs(): #그룹A의 Node들의 Level을 매기기 위해서
     que = deque()
-    for a in range(1,n+1):
-        if len(groupA[a])<2: #매칭 개수가 2개가 안넘으면 level은 0으로 시작
+    for a in range(1,m+1):
+        if len(groupA[a])<maximum: #매칭 개수가 2개가 안넘으면 level은 0으로 시작
             dist[a] = 0
             que.append(a)
         else:
@@ -34,19 +34,21 @@ def dfs(a):
     return 1
 
 
-n,m,k = map(int, input().split())
-graph = [[]]
+n,m = map(int, input().split())
+graph = [[] for i in range(m+1)]
+maximum = (n//2)
 
-for i in range(n):
-    graph.append(list(map(int, input().split()))[1:])
-groupA = [[] for i in range(n+1)]
-groupB = [0 for i in range(m+1)]
-dist = [INF for i in range(n+1)] #그룹A의 Node들의 Level
+for i in range(1,n+1):
+    graph[int(input())].append(i)
+groupA = [[] for i in range(m+1)]
+groupB = [0 for i in range(n+1)]
+dist = [INF for i in range(m+1)] #그룹A의 Node들의 Level
 match = 0 #매칭숫자
 while bfs():
-    for a in range(1, n+1):
-        if len(groupA[a])<2: #매칭 개수가 2개가 안넘으면
+    for a in range(1, m+1):
+        if len(groupA[a])<maximum: #매칭 개수가 2개가 안넘으면
             match += dfs(a)
-        if len(groupA[a])<2: #매칭 개수가 2개가 안넘으면
+        if len(groupA[a])<maximum: #매칭 개수가 2개가 안넘으면
             match += dfs(a)
+print(groupA)
 print(match)
