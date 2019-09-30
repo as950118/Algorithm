@@ -9,6 +9,7 @@ int n,m,w,h;
 int person[2001], day[2001], ret[2001];
 int flag[2001];
 int able[2001];
+
 int func(){
 	for(int i=0; i<m; i++){
 		continue;
@@ -22,15 +23,16 @@ int main() {
 	memset(ret, 0, sizeof(ret));
 	memset(flag, 0, sizeof(flag));
 	memset(able, 0, sizeof(able));
-	char test[] = "abcdefg";
+	
 	cin>>m>>n>>w>>h;
+	
 	for(int i=0; i<m; i++){
 		cin>>person[i];
 	}
 	for(int i=0; i<n; i++){
 		cin>>day[i];
 	}
-	//ì •ë ¬
+	//Á¤·Ä 
 	sort(person, person+m);
 	if(debug){
 		cout<<"sort person"<<endl;
