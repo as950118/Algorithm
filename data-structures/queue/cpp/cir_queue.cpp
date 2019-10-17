@@ -26,7 +26,7 @@ void init_queue(QueueType *q)
 int is_empty(QueueType *q)
 {
 	if(q->front == q->rear) {
-		printf("Queue is empty\n");
+		error("Queue is empty\n");
 		return 1;
 	}
 	return 0;
@@ -36,7 +36,7 @@ int is_empty(QueueType *q)
 int is_full(QueueType *q)
 {
 	if((q->rear + 1) % MAX_QUEUE_SIZE == q->front) {
-		printf("Queue is full\n");
+		error("Queue is full\n");
 		return 1;
 	}
 	return 0;
