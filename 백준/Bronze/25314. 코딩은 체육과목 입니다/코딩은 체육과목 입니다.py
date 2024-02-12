@@ -1,2 +1,1 @@
-i=int(input())
-print("long "*(i//4)+"int")
+print(int(input())//4*"long "+"int")
