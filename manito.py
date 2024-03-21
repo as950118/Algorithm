@@ -11,46 +11,10 @@ smtp_password = "MY_PASSWORD"
 
 # 참가자 목록 및 이메일 주소 설정
 participants = {
-    "권현성": "hs.kwan@okestro.com",
-    "김경민": "km.kim3@okestro.com",
-    "김경한": "kh.kim@okestro.com",
-    "김다정": "dj.kim@okestro.com",
-    "김동현": "dh.kim3@okestro.com",
-    "김동희": "dh.kim6@okestro.com",
-    "김성재": "sj.kim4@okestro.com",
-    "김창훈": "ch.kim@okestro.com",
-    "남동호": "dh.nam@okestro.com",
-    "방서근": "sk.bang@okestro.com",
-    "백승한": "sh.baik@okestro.com",
-    "손가영": "ky.son@okestro.com",
-    "손동환": "dh.son@okestro.com",
-    "송인호": "ih.song@okestro.com",
-    "안정식": "js.an@okestro.com",
-    "엄태혁": "th.eom@okestro.com",
-    "염윤철": "yc.yeom@okestro.com",
-    "오혁상": "hs.oh@okestro.com",
-    "윤수지": "sz.yoon@okestro.com",
-    "이본우": "bw.lee@okestro.com",
-    "이상욱": "su.lee@okestro.com",
-    "이유진": "yj.lee3@okestro.com",
-    "이준호": "jh.lee3@okestro.com",
-    "이찬형": "ch.lee3@okestro.com",
-    "임효빈": "hb.lim@okestro.com",
-    "정민우": "mu.jung@okestro.com",
-    "정승환": "sh.jung2@okestro.com",
     "정헌진": "hj.jeong@okestro.com",
-    "조기현": "kh.jo@okestro.com",
-    "최두영": "dy.choi@okestro.com",
-    "최미영": "my.choi@okestro.com",
-    "최인선": "is.choi@okestro.com",
-    "최현수": "hs.choi@okestro.com",
-    "한동호": "dh.han@okestro.com",
-    "홍성철": "sc.hong@okestro.com",
-    "홍솔빈": "sb.hong@okestro.com",
-    "홍진의": "ju.hong@okestro.com",
-    "한희연": "hy.han@okestro.com",
+    "정헌진2": "hj.jeong@okestro.com",
 }
-print(len(participants))
+
 # 무작위로 마니또 할당 생성
 def generate_secret_santa(participants):
     santas = list(participants.keys())
