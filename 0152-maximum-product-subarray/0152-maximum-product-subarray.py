@@ -8,5 +8,4 @@ class Solution:
             cur, neg_cur = max(num, cur*num, neg_cur*num), min(num, cur*num, neg_cur*num)
             max_prd = max(max_prd, cur)
             neg_max_prd = min(neg_max_prd, cur)
-            print(max_prd, neg_max_prd)
         return max_prd
