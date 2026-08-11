@@ -1,6 +1,21 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        try:
-            return nums.index(target)
-        except:
-            return -1
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            if nums[mid] == target:
+                return mid
+
+            # 왼쪽 절반이 정렬되어 있는 경우
+            if nums[lo] <= nums[mid]:
+                if nums[lo] <= target < nums[mid]:
+                    hi = mid - 1
+                else:
+                    lo = mid + 1
+            # 오른쪽 절반이 정렬되어 있는 경우
+            else:
+                if nums[mid] < target <= nums[hi]:
+                    lo = mid + 1
+                else:
+                    hi = mid - 1
+        return -1
