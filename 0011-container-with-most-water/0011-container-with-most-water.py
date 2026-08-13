@@ -9,8 +9,7 @@ class Solution:
             left = height[l]
             right = height[r]
             area = (r-l) * min(left, right)
-            if max_area < area:
-                max_area = area
+            max_area = max(max_area, area)
             if left < right:
                 l += 1
             else:
