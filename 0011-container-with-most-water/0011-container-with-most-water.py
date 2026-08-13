@@ -11,15 +11,10 @@ class Solution:
             area = (r-l) * min(left, right)
             if max_area < area:
                 max_area = area
-                if left < right:
-                    l += 1
-                else:
-                    r -= 1
+            if left < right:
+                l += 1
             else:
-                if left < right:
-                    l += 1
-                else:
-                    r -= 1
+                r -= 1
         return max_area
         # height_to_idx = {h:[] for h in height}
         # for i, h in enumerate(height):
