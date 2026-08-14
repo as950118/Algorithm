@@ -9,7 +9,5 @@ class Solution:
         # return climb(n)
         a, b = 0, 1
         for i in range(n):
-            c = a + b
-            a, b = b, c
-        
+            a, b = b, a+b        
         return b
