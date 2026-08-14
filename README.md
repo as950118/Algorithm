@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/as950118/Algorithm/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0217-contains-duplicate](https://github.com/as950118/Algorithm/tree/master/0217-contains-duplicate) |
 | [0238-product-of-array-except-self](https://github.com/as950118/Algorithm/tree/master/0238-product-of-array-except-self) |
+| [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -20,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0070-climbing-stairs](https://github.com/as950118/Algorithm/tree/master/0070-climbing-stairs) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/as950118/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0152-maximum-product-subarray](https://github.com/as950118/Algorithm/tree/master/0152-maximum-product-subarray) |
+| [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
 ## Hash Table
 |  |
 | ------- |
@@ -64,4 +66,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/as950118/Algorithm/tree/master/0070-climbing-stairs) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
+## Knapsack Problem
+|  |
+| ------- |
+| [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
+## Complete Knapsack
+|  |
+| ------- |
+| [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
 <!---LeetCode Topics End-->
