@@ -24,6 +24,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0152-maximum-product-subarray](https://github.com/as950118/Algorithm/tree/master/0152-maximum-product-subarray) |
 | [0300-longest-increasing-subsequence](https://github.com/as950118/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
+| [1143-longest-common-subsequence](https://github.com/as950118/Algorithm/tree/master/1143-longest-common-subsequence) |
 ## Hash Table
 |  |
 | ------- |
@@ -85,4 +86,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0300-longest-increasing-subsequence](https://github.com/as950118/Algorithm/tree/master/0300-longest-increasing-subsequence) |
+## String
+|  |
+| ------- |
+| [1143-longest-common-subsequence](https://github.com/as950118/Algorithm/tree/master/1143-longest-common-subsequence) |
+## Longest Common Subsequence
+|  |
+| ------- |
+| [1143-longest-common-subsequence](https://github.com/as950118/Algorithm/tree/master/1143-longest-common-subsequence) |
 <!---LeetCode Topics End-->
