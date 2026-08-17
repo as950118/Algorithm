@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0238-product-of-array-except-self](https://github.com/as950118/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0300-longest-increasing-subsequence](https://github.com/as950118/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
+| [1431-kids-with-the-greatest-number-of-candies](https://github.com/as950118/Algorithm/tree/master/1431-kids-with-the-greatest-number-of-candies) |
 ## Dynamic Programming
 |  |
 | ------- |
