@@ -56,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0011-container-with-most-water](https://github.com/as950118/Algorithm/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/as950118/Algorithm/tree/master/0015-3sum) |
+| [1768-merge-strings-alternately](https://github.com/as950118/Algorithm/tree/master/1768-merge-strings-alternately) |
 ## Greedy
 |  |
 | ------- |
@@ -95,6 +96,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0139-word-break](https://github.com/as950118/Algorithm/tree/master/0139-word-break) |
 | [1143-longest-common-subsequence](https://github.com/as950118/Algorithm/tree/master/1143-longest-common-subsequence) |
+| [1768-merge-strings-alternately](https://github.com/as950118/Algorithm/tree/master/1768-merge-strings-alternately) |
 ## Longest Common Subsequence
 |  |
 | ------- |
