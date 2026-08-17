@@ -3,22 +3,24 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         word_set = set(wordDict)
         n = len(s)
-        dp = [[None] * n for i in range(n)]
+        dp = [None] * n
         def func(k):
             if k == n:
                 return True
-            if dp[k][n-1] != None:
-                return dp[k][n-1]
+            if dp[k] != None:
+                return dp[k]
             for i in range(k, n):
                 if s[k:i+1] in word_set:
                     ret = func(i+1)
                     if ret:
-                        dp[k][i] = True
-                        return dp[k][i]            
+                        dp[k] = True
+                        return dp[k]
+                    else:
+                        dp[k] = False
                 else:
-                    dp[k][i] = False
-            if dp[0][k] == None:
-                dp[0][k] = False
-            return dp[0][k]
+                    dp[k] = False
+            if dp[0] == None:
+                dp[0] = False
+            return dp[0]
         return func(0)
 
