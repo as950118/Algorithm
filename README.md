@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0300-longest-increasing-subsequence](https://github.com/as950118/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
 | [0605-can-place-flowers](https://github.com/as950118/Algorithm/tree/master/0605-can-place-flowers) |
+| [0643-maximum-average-subarray-i](https://github.com/as950118/Algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [1431-kids-with-the-greatest-number-of-candies](https://github.com/as950118/Algorithm/tree/master/1431-kids-with-the-greatest-number-of-candies) |
 ## Dynamic Programming
 |  |
@@ -122,4 +123,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1071-greatest-common-divisor-of-strings](https://github.com/as950118/Algorithm/tree/master/1071-greatest-common-divisor-of-strings) |
+## Sliding Window
+|  |
+| ------- |
+| [0643-maximum-average-subarray-i](https://github.com/as950118/Algorithm/tree/master/0643-maximum-average-subarray-i) |
 <!---LeetCode Topics End-->
