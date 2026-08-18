@@ -87,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/as950118/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/as950118/Algorithm/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Knapsack Problem
 |  |
 | ------- |
@@ -140,14 +141,17 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/as950118/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0872-leaf-similar-trees](https://github.com/as950118/Algorithm/tree/master/0872-leaf-similar-trees) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/as950118/Algorithm/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Depth-First Search
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/as950118/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0872-leaf-similar-trees](https://github.com/as950118/Algorithm/tree/master/0872-leaf-similar-trees) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/as950118/Algorithm/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Binary Tree
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/as950118/Algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0872-leaf-similar-trees](https://github.com/as950118/Algorithm/tree/master/0872-leaf-similar-trees) |
+| [1448-count-good-nodes-in-binary-tree](https://github.com/as950118/Algorithm/tree/master/1448-count-good-nodes-in-binary-tree) |
 <!---LeetCode Topics End-->
