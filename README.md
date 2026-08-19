@@ -53,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Divide and Conquer
 |  |
 | ------- |
+| [0023-merge-k-sorted-lists](https://github.com/as950118/Algorithm/tree/master/0023-merge-k-sorted-lists) |
 | [0053-maximum-subarray](https://github.com/as950118/Algorithm/tree/master/0053-maximum-subarray) |
 ## Binary Search
 |  |
@@ -188,6 +189,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Linked List
 |  |
 | ------- |
+| [0023-merge-k-sorted-lists](https://github.com/as950118/Algorithm/tree/master/0023-merge-k-sorted-lists) |
 | [0146-lru-cache](https://github.com/as950118/Algorithm/tree/master/0146-lru-cache) |
 ## Design
 |  |
@@ -197,4 +199,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/as950118/Algorithm/tree/master/0146-lru-cache) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0023-merge-k-sorted-lists](https://github.com/as950118/Algorithm/tree/master/0023-merge-k-sorted-lists) |
+## Merge Sort
+|  |
+| ------- |
+| [0023-merge-k-sorted-lists](https://github.com/as950118/Algorithm/tree/master/0023-merge-k-sorted-lists) |
+## Tournament Sort
+|  |
+| ------- |
+| [0023-merge-k-sorted-lists](https://github.com/as950118/Algorithm/tree/master/0023-merge-k-sorted-lists) |
 <!---LeetCode Topics End-->
