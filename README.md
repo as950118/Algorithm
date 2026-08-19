@@ -36,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0139-word-break](https://github.com/as950118/Algorithm/tree/master/0139-word-break) |
 | [0217-contains-duplicate](https://github.com/as950118/Algorithm/tree/master/0217-contains-duplicate) |
+| [0438-find-all-anagrams-in-a-string](https://github.com/as950118/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
 | [1657-determine-if-two-strings-are-close](https://github.com/as950118/Algorithm/tree/master/1657-determine-if-two-strings-are-close) |
 ## Sorting
 |  |
@@ -109,6 +110,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0139-word-break](https://github.com/as950118/Algorithm/tree/master/0139-word-break) |
+| [0438-find-all-anagrams-in-a-string](https://github.com/as950118/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
 | [1071-greatest-common-divisor-of-strings](https://github.com/as950118/Algorithm/tree/master/1071-greatest-common-divisor-of-strings) |
 | [1143-longest-common-subsequence](https://github.com/as950118/Algorithm/tree/master/1143-longest-common-subsequence) |
 | [1657-determine-if-two-strings-are-close](https://github.com/as950118/Algorithm/tree/master/1657-determine-if-two-strings-are-close) |
@@ -136,6 +138,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sliding Window
 |  |
 | ------- |
+| [0438-find-all-anagrams-in-a-string](https://github.com/as950118/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0643-maximum-average-subarray-i](https://github.com/as950118/Algorithm/tree/master/0643-maximum-average-subarray-i) |
 ## Counting
 |  |
