@@ -36,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0139-word-break](https://github.com/as950118/Algorithm/tree/master/0139-word-break) |
+| [0146-lru-cache](https://github.com/as950118/Algorithm/tree/master/0146-lru-cache) |
 | [0217-contains-duplicate](https://github.com/as950118/Algorithm/tree/master/0217-contains-duplicate) |
 | [0438-find-all-anagrams-in-a-string](https://github.com/as950118/Algorithm/tree/master/0438-find-all-anagrams-in-a-string) |
 | [1657-determine-if-two-strings-are-close](https://github.com/as950118/Algorithm/tree/master/1657-determine-if-two-strings-are-close) |
@@ -184,4 +185,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/as950118/Algorithm/tree/master/0005-longest-palindromic-substring) |
+## Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/as950118/Algorithm/tree/master/0146-lru-cache) |
+## Design
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/as950118/Algorithm/tree/master/0146-lru-cache) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/as950118/Algorithm/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
