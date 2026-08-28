@@ -120,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1143-longest-common-subsequence](https://github.com/as950118/Algorithm/tree/master/1143-longest-common-subsequence) |
 | [1657-determine-if-two-strings-are-close](https://github.com/as950118/Algorithm/tree/master/1657-determine-if-two-strings-are-close) |
 | [1768-merge-strings-alternately](https://github.com/as950118/Algorithm/tree/master/1768-merge-strings-alternately) |
+| [2390-removing-stars-from-a-string](https://github.com/as950118/Algorithm/tree/master/2390-removing-stars-from-a-string) |
 ## Longest Common Subsequence
 |  |
 | ------- |
@@ -211,4 +212,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/as950118/Algorithm/tree/master/0023-merge-k-sorted-lists) |
+## Stack
+|  |
+| ------- |
+| [2390-removing-stars-from-a-string](https://github.com/as950118/Algorithm/tree/master/2390-removing-stars-from-a-string) |
+## Simulation
+|  |
+| ------- |
+| [2390-removing-stars-from-a-string](https://github.com/as950118/Algorithm/tree/master/2390-removing-stars-from-a-string) |
 <!---LeetCode Topics End-->
