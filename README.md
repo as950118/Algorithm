@@ -19,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
 | [0605-can-place-flowers](https://github.com/as950118/Algorithm/tree/master/0605-can-place-flowers) |
 | [0643-maximum-average-subarray-i](https://github.com/as950118/Algorithm/tree/master/0643-maximum-average-subarray-i) |
+| [0735-asteroid-collision](https://github.com/as950118/Algorithm/tree/master/0735-asteroid-collision) |
 | [1431-kids-with-the-greatest-number-of-candies](https://github.com/as950118/Algorithm/tree/master/1431-kids-with-the-greatest-number-of-candies) |
 ## Dynamic Programming
 |  |
@@ -215,9 +216,11 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0735-asteroid-collision](https://github.com/as950118/Algorithm/tree/master/0735-asteroid-collision) |
 | [2390-removing-stars-from-a-string](https://github.com/as950118/Algorithm/tree/master/2390-removing-stars-from-a-string) |
 ## Simulation
 |  |
 | ------- |
+| [0735-asteroid-collision](https://github.com/as950118/Algorithm/tree/master/0735-asteroid-collision) |
 | [2390-removing-stars-from-a-string](https://github.com/as950118/Algorithm/tree/master/2390-removing-stars-from-a-string) |
 <!---LeetCode Topics End-->
