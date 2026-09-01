@@ -19,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
 | [0605-can-place-flowers](https://github.com/as950118/Algorithm/tree/master/0605-can-place-flowers) |
 | [0643-maximum-average-subarray-i](https://github.com/as950118/Algorithm/tree/master/0643-maximum-average-subarray-i) |
+| [0724-find-pivot-index](https://github.com/as950118/Algorithm/tree/master/0724-find-pivot-index) |
 | [0735-asteroid-collision](https://github.com/as950118/Algorithm/tree/master/0735-asteroid-collision) |
 | [1431-kids-with-the-greatest-number-of-candies](https://github.com/as950118/Algorithm/tree/master/1431-kids-with-the-greatest-number-of-candies) |
 | [1732-find-the-highest-altitude](https://github.com/as950118/Algorithm/tree/master/1732-find-the-highest-altitude) |
@@ -52,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/as950118/Algorithm/tree/master/0238-product-of-array-except-self) |
+| [0724-find-pivot-index](https://github.com/as950118/Algorithm/tree/master/0724-find-pivot-index) |
 | [1732-find-the-highest-altitude](https://github.com/as950118/Algorithm/tree/master/1732-find-the-highest-altitude) |
 ## Divide and Conquer
 |  |
