@@ -201,6 +201,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/as950118/Algorithm/tree/master/0146-lru-cache) |
+| [0933-number-of-recent-calls](https://github.com/as950118/Algorithm/tree/master/0933-number-of-recent-calls) |
 ## Doubly-Linked List
 |  |
 | ------- |
@@ -227,4 +228,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0735-asteroid-collision](https://github.com/as950118/Algorithm/tree/master/0735-asteroid-collision) |
 | [2390-removing-stars-from-a-string](https://github.com/as950118/Algorithm/tree/master/2390-removing-stars-from-a-string) |
+## Queue
+|  |
+| ------- |
+| [0933-number-of-recent-calls](https://github.com/as950118/Algorithm/tree/master/0933-number-of-recent-calls) |
+## Data Stream
+|  |
+| ------- |
+| [0933-number-of-recent-calls](https://github.com/as950118/Algorithm/tree/master/0933-number-of-recent-calls) |
 <!---LeetCode Topics End-->
