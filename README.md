@@ -29,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/as950118/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0053-maximum-subarray](https://github.com/as950118/Algorithm/tree/master/0053-maximum-subarray) |
+| [0062-unique-paths](https://github.com/as950118/Algorithm/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/as950118/Algorithm/tree/master/0070-climbing-stairs) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/as950118/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/as950118/Algorithm/tree/master/0139-word-break) |
@@ -85,6 +86,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0062-unique-paths](https://github.com/as950118/Algorithm/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/as950118/Algorithm/tree/master/0070-climbing-stairs) |
 | [0371-sum-of-two-integers](https://github.com/as950118/Algorithm/tree/master/0371-sum-of-two-integers) |
 | [1071-greatest-common-divisor-of-strings](https://github.com/as950118/Algorithm/tree/master/1071-greatest-common-divisor-of-strings) |
@@ -260,4 +262,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1926-nearest-exit-from-entrance-in-maze](https://github.com/as950118/Algorithm/tree/master/1926-nearest-exit-from-entrance-in-maze) |
+## Combinatorics
+|  |
+| ------- |
+| [0062-unique-paths](https://github.com/as950118/Algorithm/tree/master/0062-unique-paths) |
 <!---LeetCode Topics End-->
