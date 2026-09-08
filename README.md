@@ -19,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
 | [0605-can-place-flowers](https://github.com/as950118/Algorithm/tree/master/0605-can-place-flowers) |
 | [0643-maximum-average-subarray-i](https://github.com/as950118/Algorithm/tree/master/0643-maximum-average-subarray-i) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/as950118/Algorithm/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0724-find-pivot-index](https://github.com/as950118/Algorithm/tree/master/0724-find-pivot-index) |
 | [0735-asteroid-collision](https://github.com/as950118/Algorithm/tree/master/0735-asteroid-collision) |
 | [1431-kids-with-the-greatest-number-of-candies](https://github.com/as950118/Algorithm/tree/master/1431-kids-with-the-greatest-number-of-candies) |
@@ -36,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0152-maximum-product-subarray](https://github.com/as950118/Algorithm/tree/master/0152-maximum-product-subarray) |
 | [0300-longest-increasing-subsequence](https://github.com/as950118/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/as950118/Algorithm/tree/master/0322-coin-change) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/as950118/Algorithm/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [1143-longest-common-subsequence](https://github.com/as950118/Algorithm/tree/master/1143-longest-common-subsequence) |
 ## Hash Table
 |  |
@@ -83,6 +85,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0011-container-with-most-water](https://github.com/as950118/Algorithm/tree/master/0011-container-with-most-water) |
 | [0605-can-place-flowers](https://github.com/as950118/Algorithm/tree/master/0605-can-place-flowers) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/as950118/Algorithm/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 ## Math
 |  |
 | ------- |
